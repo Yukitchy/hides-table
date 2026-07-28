@@ -84,7 +84,9 @@
   .stars{font-size:1.5rem; letter-spacing:2px; text-align:center; margin:0 0 8px;}
   summary{list-style:none; cursor:pointer; display:flex; align-items:center; gap:10px;}
   summary::-webkit-details-marker{display:none}
-  summary h2{margin:0; flex:1;}
+  summary h2{margin:0;}
+  .sum-txt{flex:1;}
+  .sum-hint{margin:3px 0 0; font-size:.86rem; color:var(--muted);}
   .chev{color:var(--accent); font-size:1.1rem; transition:transform .2s;}
   details[open] .chev{transform:rotate(180deg);}
   .steps{display:flex; flex-direction:column; gap:18px; margin-top:16px;}
@@ -143,7 +145,10 @@
   <div class="card" id="routeCard" hidden>
     <details>
       <summary>
-        <h2><span class="ic">📷</span> <span data-i18n="h_photos">The walk, step by step</span></h2>
+        <div class="sum-txt">
+          <h2><span class="ic">📷</span> <span data-i18n="h_photos">The walk, step by step</span></h2>
+          <p class="sum-hint" data-i18n="route_hint">Tap to open — 5 photos from the station to our door</p>
+        </div>
         <span class="chev">▾</span>
       </summary>
       <div class="steps" id="routeSteps"></div>
@@ -256,6 +261,7 @@
       route2:"駅を出て<b>新大橋通り</b>（駅の上を通る大通り）の方向へ進みます。",
       route3:"平坦な道を<b>2分</b>ほど歩けば会場です。上のGoogleマップのボタンが入口まで案内します。",
       h_photos:"写真で見る道順",
+      route_hint:"タップで開きます — 駅から玄関までの写真5枚",
       h_know:"知っておいてほしいこと",
       know1:"<b>飲み物は各自持参です。</b>お好きな飲み物を途中で買ってきてください。駅と会場のすぐ近くにコンビニがあります。",
       know2:"<b>19:30スタートです。</b>できれば数分早めに来ていただけると、みんなで一緒に席につけます。",
@@ -282,6 +288,7 @@
       route2:"出站后朝<b>新大桥通</b>（车站上方的大马路）方向走。",
       route3:"沿平路步行约<b>2分钟</b>即到。点击上方的谷歌地图按钮，可一路导航到门口。",
       h_photos:"图解路线",
+      route_hint:"点击展开 — 从车站到门口的5张照片",
       h_know:"温馨提示",
       know1:"<b>饮料请自备。</b>可以在路上买上自己喜欢的饮料，车站和会场附近都有便利店。",
       know2:"<b>19:30准时开始。</b>方便的话请提前几分钟到，我们好一起入座。",
