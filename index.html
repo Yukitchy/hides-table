@@ -60,8 +60,6 @@
   }
   .btn.secondary{background:#fff; color:var(--accent); border:1.5px solid var(--accent);}
   #map{height:260px; border-radius:12px; border:1px solid var(--line); margin-top:4px; z-index:0;}
-  ol.route{margin:6px 0 0; padding-left:20px;}
-  ol.route li{margin-bottom:8px;}
   .note{display:flex; gap:11px; align-items:flex-start; padding:12px 0; border-top:1px solid var(--line);}
   .note:first-child{border-top:none;}
   .note .ic{font-size:1.4rem; flex:none; line-height:1.2;}
@@ -135,11 +133,7 @@
 
   <div class="card">
     <h2><span class="ic">🚶</span> <span data-i18n="h_route">Getting here from Sumiyoshi Station</span></h2>
-    <ol class="route">
-      <li data-i18n="route1">Take the <b>Tokyo Metro Hanzomon Line</b> or the <b>Toei Shinjuku Line</b> to <b>Sumiyoshi Station</b>.</li>
-      <li data-i18n="route2">Leave the station toward <b>Shin-ōhashi-dōri</b> (the main avenue that runs above the station).</li>
-      <li data-i18n="route3">It's a short, flat walk of just <b>2 minutes</b> to the venue. The Google Maps button above will guide you door-to-door.</li>
-    </ol>
+    <p class="addr-sub" style="margin:0" data-i18n="route1"><b>Tokyo Metro Hanzomon Line</b> or <b>Toei Shinjuku Line</b> to <b>Sumiyoshi Station</b>, then a flat <b>2-minute</b> walk. Every turn is shown in the photos below.</p>
   </div>
 
   <div class="card" id="routeCard" hidden>
@@ -257,9 +251,7 @@
       btn_maps:"🧭 Googleマップで開く",
       h_map:"地図",
       h_route:"住吉駅からの行き方",
-      route1:"<b>東京メトロ半蔵門線</b>または<b>都営新宿線</b>で<b>住吉駅</b>へ。",
-      route2:"駅を出て<b>新大橋通り</b>（駅の上を通る大通り）の方向へ進みます。",
-      route3:"平坦な道を<b>2分</b>ほど歩けば会場です。上のGoogleマップのボタンが入口まで案内します。",
+      route1:"<b>東京メトロ半蔵門線</b>または<b>都営新宿線</b>で<b>住吉駅</b>へ。そこから平坦な道を<b>2分</b>です。曲がる場所は下の写真で確認できます。",
       h_photos:"写真で見る道順",
       route_hint:"タップで開きます — 駅から玄関までの写真5枚",
       h_know:"知っておいてほしいこと",
@@ -284,9 +276,7 @@
       btn_maps:"🧭 用谷歌地图打开",
       h_map:"地图",
       h_route:"从住吉站怎么走",
-      route1:"乘坐<b>东京地铁半藏门线</b>或<b>都营新宿线</b>到<b>住吉站</b>。",
-      route2:"出站后朝<b>新大桥通</b>（车站上方的大马路）方向走。",
-      route3:"沿平路步行约<b>2分钟</b>即到。点击上方的谷歌地图按钮，可一路导航到门口。",
+      route1:"乘<b>东京地铁半藏门线</b>或<b>都营新宿线</b>到<b>住吉站</b>，之后平路步行<b>2分钟</b>。每个转弯处见下方照片。",
       h_photos:"图解路线",
       route_hint:"点击展开 — 从车站到门口的5张照片",
       h_know:"温馨提示",
