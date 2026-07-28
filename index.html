@@ -196,7 +196,28 @@
 
   // --- 駅から入口までの写真つき道順 ---
   // 写真を route/ に置いて、ここに1行ずつ足すだけで表示される。空の間はカードごと非表示。
-  var ROUTE = [];
+  var ROUTE = [
+    {img:"route1.jpg",
+     en:"Come up to street level at <b>Sumiyoshi Station</b> (Hanzomon Line Z12 / Toei Shinjuku Line S13). This is the station entrance you'll see from the street.",
+     ja:"<b>住吉駅</b>（半蔵門線 Z12／都営新宿線 S13）から地上に出ます。通りから見るとこの出入口です。",
+     zh:"从<b>住吉站</b>（半藏门线 Z12／都营新宿线 S13）上到地面。从街上看就是这个出入口。"},
+    {img:"route2.jpg",
+     en:"You'll see a <b>Lawson</b> convenience store on the main road. Good moment to grab your drinks — remember, drinks are bring-your-own!",
+     ja:"大通り沿いに<b>ローソン</b>があります。飲み物はここで買うのがおすすめです（飲み物は各自持参です）。",
+     zh:"大路边有一家<b>罗森（Lawson）</b>便利店。可以在这里买饮料——别忘了饮料需自备。"},
+    {img:"route3.jpg",
+     en:"Head into this smaller street. Keep walking straight — it's quiet and residential.",
+     ja:"この細い通りに入ります。静かな住宅街をまっすぐ進みます。",
+     zh:"走进这条小路，一直往前走，是安静的住宅区。"},
+    {img:"route4.jpg",
+     en:"Look for this <b>narrow alley between the buildings</b> — you'll usually see bicycles parked here. Walk in.",
+     ja:"建物の間の<b>細い路地</b>が目印です（たいてい自転車が停まっています）。ここに入ります。",
+     zh:"注意找到楼与楼之间的<b>这条窄巷</b>（通常停着自行车），从这里走进去。"},
+    {img:"route5.jpg",
+     en:"You've made it! Open the <b>green door with the SHARE SPACE sign</b> and come on in — not the door marked 101.",
+     ja:"到着です。<b>「SHARE SPACE」の札が貼られた緑のドア</b>を開けて中へどうぞ（101号室のドアではありません）。",
+     zh:"到啦！请打开<b>贴有「SHARE SPACE」标志的绿色门</b>进来（不是标着 101 的那扇门）。"}
+  ];
   function renderRoute(lang){
     var card = document.getElementById('routeCard');
     if (!ROUTE.length) { card.hidden = true; return; }
