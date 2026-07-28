@@ -82,7 +82,12 @@
   .ig-handle{display:flex; align-items:center; gap:8px; margin:0 0 12px; font-size:.94rem; color:var(--muted);}
   .ig-handle b{color:var(--ink);}
   .stars{font-size:1.5rem; letter-spacing:2px; text-align:center; margin:0 0 8px;}
-  .steps{display:flex; flex-direction:column; gap:18px;}
+  summary{list-style:none; cursor:pointer; display:flex; align-items:center; gap:10px;}
+  summary::-webkit-details-marker{display:none}
+  summary h2{margin:0; flex:1;}
+  .chev{color:var(--accent); font-size:1.1rem; transition:transform .2s;}
+  details[open] .chev{transform:rotate(180deg);}
+  .steps{display:flex; flex-direction:column; gap:18px; margin-top:16px;}
   .step img{width:100%; aspect-ratio:4/3; object-fit:cover; display:block;
     border-radius:12px; border:1px solid var(--line); background:var(--accent-soft);}
   .step-cap{display:flex; gap:10px; align-items:flex-start; margin:9px 0 0;}
@@ -136,8 +141,13 @@
   </div>
 
   <div class="card" id="routeCard" hidden>
-    <h2><span class="ic">📷</span> <span data-i18n="h_photos">The walk, step by step</span></h2>
-    <div class="steps" id="routeSteps"></div>
+    <details>
+      <summary>
+        <h2><span class="ic">📷</span> <span data-i18n="h_photos">The walk, step by step</span></h2>
+        <span class="chev">▾</span>
+      </summary>
+      <div class="steps" id="routeSteps"></div>
+    </details>
   </div>
 
   <div class="card">
