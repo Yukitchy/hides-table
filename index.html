@@ -58,6 +58,12 @@
   footer{text-align:center; color:var(--muted); font-size:.9rem; padding:8px 10px 0;}
   footer .heart{color:var(--accent);}
   a.inline{color:var(--accent); font-weight:600;}
+  .ig-row{display:flex; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory;
+    margin:0 -18px; padding:2px 18px 6px; -webkit-overflow-scrolling:touch;}
+  .ig-row iframe{flex:none; width:290px; height:400px; border:1px solid var(--line);
+    border-radius:12px; background:#fff; scroll-snap-align:start;}
+  .swipe-hint{color:var(--muted); font-size:.85rem; margin:8px 0 0; text-align:center;}
+  .stars{font-size:1.5rem; letter-spacing:2px; text-align:center; margin:0 0 8px;}
 </style>
 </head>
 <body>
@@ -94,7 +100,7 @@
     <ol class="route">
       <li>Take the <b>Tokyo Metro Hanzomon Line</b> or the <b>Toei Shinjuku Line</b> to <b>Sumiyoshi Station</b>.</li>
       <li>Leave the station toward <b>Shin-ōhashi-dōri</b> (the main avenue that runs above the station).</li>
-      <li>It's a short, flat walk of just <b>2 minutes</b> to the share house. The Google Maps button above will guide you door-to-door.</li>
+      <li>It's a short, flat walk of just <b>2 minutes</b> to the venue. The Google Maps button above will guide you door-to-door.</li>
     </ol>
   </div>
 
@@ -112,6 +118,32 @@
       <span class="ic">💬</span>
       <p><b>Lost or running late?</b> Just message us anytime through the <b>Viator chat</b> on your booking — we'll help you find the door.</p>
     </div>
+  </div>
+
+  <div class="card">
+    <h2><span class="ic">📸</span> What our dinners look like</h2>
+    <div class="ig-row">
+      <iframe src="https://www.instagram.com/p/DbKan0CCXti/embed/" loading="lazy"
+        scrolling="no" allowtransparency="true" title="Instagram post"></iframe>
+      <iframe src="https://www.instagram.com/p/DbFX6b6JIVX/embed/" loading="lazy"
+        scrolling="no" allowtransparency="true" title="Instagram post"></iframe>
+      <iframe src="https://www.instagram.com/p/DazV2AWpSNq/embed/" loading="lazy"
+        scrolling="no" allowtransparency="true" title="Instagram post"></iframe>
+    </div>
+    <p class="swipe-hint">← swipe for more →</p>
+    <a class="btn secondary" href="https://www.instagram.com/canal_palace/"
+       target="_blank" rel="noopener">📷 Follow @canal_palace</a>
+  </div>
+
+  <div class="card">
+    <h2><span class="ic">🌟</span> Enjoyed the evening?</h2>
+    <p class="stars">★★★★★</p>
+    <p class="addr-sub" style="margin-bottom:0">A review means the world to a small, home-cooked
+      dinner like ours — it's how other travelers find us. It takes two minutes.<br><br>
+      Viator will email you a review link after your dinner. You can also leave one straight
+      from our page below.</p>
+    <a class="btn" href="https://www.viator.com/tours/Tokyo/Hides-Table-A-Unique-Dinner-Gathering-Every-Wednesday-Night/d334-176858P6"
+       target="_blank" rel="noopener">🌟 Write a review on Viator</a>
   </div>
 
   <footer>Made with <span class="heart">♥</span> by Hide &amp; Yuuki · See you Wednesday!</footer>
