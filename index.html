@@ -168,8 +168,12 @@
 <script>
   // --- Instagram photo grid (images stored locally so nothing expires) ---
   var IG = [
+    {id:"Da1y7rAiQGq", kind:"p"},
     {id:"DbKan0CCXti", kind:"p"},
-    {id:"DbKcMU5pQPv", kind:"reel"}
+    {id:"DbKcMU5pQPv", kind:"reel"},
+    {id:"DaPJBciCZHI", kind:"p"},
+    {id:"DZ0p-MUzIOU", kind:"reel"},
+    {id:"DaPKMH9Jqy7", kind:"reel"}
   ];
   if (IG.length < 3) document.getElementById('igGrid').style.gridTemplateColumns = 'repeat('+IG.length+',1fr)';
   document.getElementById('igGrid').innerHTML = IG.map(function(p){
