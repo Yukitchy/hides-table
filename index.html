@@ -206,6 +206,7 @@
 
   // --- 駅から入口までの写真つき道順 ---
   // 写真を route/ に置いて、ここに1行ずつ足すだけで表示される。空の間はカードごと非表示。
+  var curLang = 'en';   // 開いた時に初めて画像を読み込む（閉じたままなら通信ゼロ）
   var ROUTE = [
     {img:"route1.jpg",
      en:"At <b>Sumiyoshi Station</b> (Hanzomon Line Z12 / Toei Shinjuku Line S13), come up to street level at <b>Exit B2</b> — this is what it looks like from the street.",
@@ -232,6 +233,7 @@
     var card = document.getElementById('routeCard');
     if (!ROUTE.length) { card.hidden = true; return; }
     card.hidden = false;
+    if (!card.querySelector('details').open) { return; }   // 閉じている間は画像を作らない
     document.getElementById('routeSteps').innerHTML = ROUTE.map(function(s, i){
       return '<div class="step"><img src="route/'+s.img+'" loading="lazy" alt="Step '+(i+1)+'">'
         + '<div class="step-cap"><span class="num">'+(i+1)+'</span><p>'+(s[lang] || s.en)+'</p></div></div>';
@@ -303,6 +305,7 @@
       if (v !== undefined) el.innerHTML = v;
     });
     document.documentElement.lang = lang === 'zh' ? 'zh-CN' : lang;
+    curLang = lang;
     renderRoute(lang);
     document.querySelectorAll('.langs button').forEach(function(b){
       b.setAttribute('aria-pressed', String(b.dataset.lang === lang));
@@ -311,6 +314,8 @@
   document.querySelectorAll('.langs button').forEach(function(b){
     b.addEventListener('click', function(){ setLang(b.dataset.lang); });
   });
+  document.querySelector('#routeCard details')
+    .addEventListener('toggle', function(){ renderRoute(curLang); });
   renderRoute('en');
 
   // --- map ---
